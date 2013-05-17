@@ -1,0 +1,284 @@
+<!-- old -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="content-type" content="text/html,charset=utf-8" />
+
+	<title>:: PeerGaming - Examples ::</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+	<link rel="stylesheet" type="text/css" href="lobby/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="lobby/styles/site.css">
+
+</head>
+<body>
+
+
+	<div class="page-wrapper">
+
+		<div class="bar-top" id="bar-top"></div>
+
+
+
+		<div class="container" id="container">
+
+
+			<div class="header" id="header">
+
+				<div class="header-container">
+
+					<h1 class="header-title">PeerGaming</h1>
+					<h2 class="header-subtitle">Share The Fun</h2>
+
+				</div>
+
+			</div>
+
+
+
+
+			<!-- start panel -->
+			<div class="intro" id="intro">
+
+
+
+
+				<!-- visible gate -->
+				<div class="gate-left" id="gate-left">
+
+					<div class="panel-lobby" id="panel-lobby">
+
+						<h2>Lobby</h2>
+
+						<p>Try it yourself and join :)</p>
+
+
+						<!-- available OAuth Modules -->
+						<ul>
+
+							<li> - </li>
+<!--
+
+							<li> Github </li>
+
+							<li> Persona </li>
+
+							<li> Twitter </li>
+							<li> Facebook </li>
+							<li> Google+ </li>
+ -->
+						</ul>
+
+
+						<form class="form-login" id="form">
+							<label for="user-name">Name:</label>
+							<input type="name" id="user-name" />
+							<input type="submit" value="login" id="button-open" />
+						</form>
+
+
+
+					</div>
+
+				</div>
+
+				<div class="gate-right" id="gate-right">
+
+					<div class="panel-info" id="panel-info">
+
+						<h2>Info</h2>
+
+						<p>
+							PeerGaming is a Client-Side Multiplayer Gaming Framework for the
+							Browser. It uses
+
+							Documentation: <a href="#"></a>
+
+							<!-- Twitter: -->
+							Github:	<a href="#">Octocat Link</a>
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+			<div class="lobby">
+
+				<!-- headerbar -->
+				<div class="header">
+
+					<div class="settings"></div>
+					<div class="matchmaking"></div>
+
+				</div>
+
+
+
+
+				<!-- main view -->
+				<!-- <div class="main"> -->
+
+				<div class="main">
+
+					<!-- chat / interaction left -->
+					<div class="channel">	<!-- content - really the main usage... -->
+
+						<div class="channel-layer">
+
+
+							<div class="chat">
+
+								<div class="chat-text" id="chatframe">
+
+									<p class="system-text">Example</p>
+									<!-- <p class="user-text">124</p> -->
+
+								</div>
+
+
+								<form class="form-chat" id="chatform">
+									<label for="user-name" id="chatname"></label>
+									<input class="chat-input" type="text" id="chatinput"/>
+								</form>
+
+
+							</div>
+
+
+						</div>
+
+
+					</div>
+
+
+
+
+
+
+					<!-- profile + list - right -->
+					<div class="user">
+
+						<div class="profile">
+
+							<div class="profile-name" id="profile-name"></div>
+
+						</div>
+
+
+						<div class="info">
+
+							<ul class="list">
+								<li class="list-entry list-entry-active">Channel</li>
+								<li class="list-entry">Friends</li>
+							</ul>
+
+							<ul class="list-current" id="currentlist" >
+
+							<!-- 	<li class="peer" data-id="1">
+
+									<div class="peer-menu">
+										<div class="part-add"></div>
+										<div class="part-invite"></div>
+										<div class="part-msg"></div>
+										<div class="mask"></div>
+										<div class="peer-holder"></div>
+									</div>
+
+									<div class="peer-name">Example #1</div>
+
+								</li> -->
+
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<!-- foooter -->
+				<div class="footer">
+
+					<!-- info -->
+					<!-- <div>
+						<ul class="info">
+							<li>User Online: 0</li>
+							<li>Channels Active: 0</li>
+							<li>Latest User: </li>
+						</ul>
+					</div> -->
+
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="bar-bottom" id="bar-bottom"></div>
+
+	</div>
+
+
+
+
+
+
+
+	<script src="vendor/prefixfree.min.js"></script>
+	<script src="vendor/peergaming.js"></script>
+
+
+	<script src="lobby/scripts/auth.js"></script>
+
+	<script src="lobby/scripts/helper.js"></script>
+	<script src="lobby/scripts/gui.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!--
+	<video autoplay id="vid1"></video>
+	<video autoplay id="vid2"></video>
+
+	<form class="fading" id="form">
+
+		<label for="name">Login:</label>
+		<input type="name" required id="name" />
+		<button type="submit">Enter</button>
+
+	</form>
+-->

@@ -1,0 +1,36 @@
+
+@import "colors";
+@import "font";
+
+// Variables
+// =========
+
+
+// Base Sizes
+// ==========
+
+$base-font-size               : 16;
+$base-line-height             : 24;
+$base-fs                      : $base-font-size;
+$base-lh                      : $base-line-height;
+
+/* Size + Units */
+$size: 1em; // 16px = 1em
+$value: 16;	// for calculations
+
+
+// Breakpoints
+// ===========
+
+// $breakpoint-narrow	: 30em;
+// $breakpoint-mid		: 48em;
+// $breakpoint-wide	: 60em;
+// $breakpoint-huge	: 100em;
+
+
+
+
+// http://thesassway.com/beginner/how-to-structure-a-sass-project
+
+// http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+

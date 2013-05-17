@@ -1,0 +1,45 @@
+
+
+
+
+
+.page-wrapper {
+
+	height	: 100%;
+	width	: 100%;
+}
+
+
+
+.container {
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #eee;
+	/*background-color: rgb(201, 121, 88);*/
+}
+
+.resize-h80 {
+
+	transition: 1s height ease-in-out;
+	height: 80% !important; /* see position: absolute */
+}
+
+
+
+
+.intro {
+
+	width: 100%;
+	height:100%;
+	position: absolute;
+	z-index: 2;
+}
+
+.lobby {
+	width: 100%;
+	height:100%;
+	position: absolute;
+	z-index: 1;
+}

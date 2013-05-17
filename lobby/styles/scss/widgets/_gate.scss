@@ -1,0 +1,36 @@
+
+
+.gate {
+
+	position: relative;
+
+	width	: 50%;
+	height	: 100%;
+
+	background-color: $color-gate;
+
+	@include transition(2s);
+}
+
+
+.gate-left {
+
+	@extend .gate;
+
+	float: left;
+
+	left: 0;	// interpolation for FF
+
+	&.gate-opened {	left: -50%;	}
+}
+
+.gate-right {
+
+	@extend .gate;
+
+	float: right;
+
+	right: 0;
+
+	&.gate-opened {	right: -50%; }
+}

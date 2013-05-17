@@ -1,0 +1,82 @@
+
+// Includes
+// ========
+
+@import "base/all";
+@import "mixins/all";
+@import "module/all";
+@import "widgets/all";
+
+
+
+// Base
+// ====
+
+// border box
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
+html, body {
+
+	//width	: 100%;
+	height	: 100%;
+	margin	: 0;
+	padding	: 0;
+}
+
+body {
+
+	overflow-x: hidden;	// no a solution for the faster sliding out !
+}
+
+
+
+
+
+
+// html, body {
+
+// 	@include height;
+// }
+
+// body {
+
+// 	@include font-size();
+
+// 	position			: relative;
+
+// 	overflow-y			: scroll;
+
+// 	color				: $color-text;
+// 	background-color	: $color-mu-background;
+// }
+
+
+
+// a {
+// 	text-decoration: none;
+// 	color: $color-link-default;
+
+// 	@include transition;
+
+// 	&:hover {
+
+// 		color: $color-link-hover;
+// 	}
+// }
+
+
+
+// .container {
+
+// 	@include height();
+
+// 	@extend .wrap;
+// 	@extend .center;
+// }

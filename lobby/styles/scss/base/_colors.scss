@@ -1,0 +1,89 @@
+
+// Colour Scheme
+// =============
+
+
+// $color-panel					: #eee;
+$color-panel-lobby				: #E67E22;
+$color-panel-info				: #2ECC71;
+
+$color-panel-lobby-font			: #ECF0F1;
+$color-panel-info-font			: #34495E;
+
+
+
+// Mein Unterricht
+
+//#F1C40F;	// #eee;
+
+
+
+$color-bar								: #2C3E50;//#34495E
+$color-gate								: #2980B9;//#9B59B6;
+
+$color-lobby-channel					: #eee;
+$color-lobby-channel-layer				: #111;//rgba(0,0,0,0.7);
+
+$color-lobby-chat-system-font			: #ffec70;
+$color-lobby-chat-user-font				: #ffec70;
+
+
+
+
+$color-lobby-user						: darken( $color-bar, 10%);
+$color-lobby-user-font					: #eee;
+
+
+$color-lobby-info						: #eee;
+
+$color-lobby-info-list-entry-active		: #16A085;
+$color-lobby-info-list-entry			: darken( $color-lobby-info-list-entry-active, 10% );
+$color-lobby-info-list-entry-font		: #eee;
+
+
+$color-lobby-info-list-peer				: rgb(86, 90, 94);//darken( $color-lobby-user, 10%);
+
+
+
+$color-lobby-chat-input					: $color-lobby-info;
+
+
+
+
+
+
+
+// $color-list-entry				:
+
+$color-circle					: #AB3244; //#E74C3C; #0088cc;
+$color-circle-hover				: lighten( $color-circle, 10% ); //#E74C3C; #0088cc;
+// $color-circle-menu				:
+
+
+
+// Common
+// $color-text						: #242424;
+// $color-border					: #333;
+
+
+// Links
+$color-link-default				: #333;
+$color-link-hover				: #eee;
+
+
+
+// Examples
+// $color-ex1-background			: #48d54d;
+// $color-ex1-border				: #2ab72e;
+
+// $color-ex2-background			: #cd64e3;
+// $color-ex2-border				: #b326cf;
+
+// $color-ex3-background			: #ffec70;
+// $color-ex3-border				: #f5d400;
+
+
+
+// Elements
+// $color-elements-text			: #eee;
+// $color-info-background			: #AB3244;

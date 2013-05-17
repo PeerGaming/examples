@@ -1,0 +1,30 @@
+
+.panel {
+
+	@extend .center;
+
+	width: 300px;
+	height: 300px;
+
+	margin-top: 100px;
+}
+
+
+.panel-lobby {
+
+
+	@extend .panel;
+
+	background-color: $color-panel-lobby;
+	// color: $color-panel-lobby-font;
+}
+
+
+
+.panel-info {
+
+	@extend .panel;
+
+	background-color: $color-panel-info;
+	// color: $color-panel-info-font;
+}

@@ -1,0 +1,55 @@
+
+@import "grid";
+
+// Layout
+// ======
+
+.center {
+
+	margin: 0 auto;
+	display: block; //inline-block
+	vertical-align: middle;
+
+	@include center-text;
+}
+
+.wrap {
+
+	width: 100%;
+	position: relative;
+
+	@include clearfix;
+}
+
+
+// Simple float
+.left { float:  left; @include clearfix; }
+.right { float: right; @include clearfix; }
+
+
+
+// line
+ul {
+
+	border	: 0;
+	padding	: 0;
+	margin	: 0;
+
+	vertical-align: baseline;
+	list-style: none;
+
+	// horizontal line
+	&.line {
+
+		// margin	: 0;
+		// padding	: 0;
+
+		& > li {
+
+			display	: inline-block;
+			float	: left;
+		}
+	}
+}
+
+

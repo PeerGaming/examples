@@ -1,0 +1,172 @@
+/*
+
+	ToDo:
+
+	- add non active state - moving backwards, rolling up (as clicked a second time etc.)
+
+
+ */
+
+$duration: 0.3;
+$radius: 50px;
+
+
+.peer-menu {
+
+	float: left;
+
+	position: relative;
+	background: $color-lobby-user;
+
+	width: $radius;
+	height: $radius;
+}
+
+
+.mask {
+
+	position: absolute;
+	opacity: 1;
+	z-index: 300;
+
+	background: $color-lobby-info-list-peer;
+
+	right: 0;
+	height: 100%;
+	width: 50%;
+}
+
+
+.part {
+
+	position: absolute;
+
+	width: 50%;
+	height: 100%;
+	transform-origin: 100% 50%;
+
+	background: $color-circle;
+	border-radius: 100% 0 0 100%/50% 0 0 50%;
+
+	border-right: none;
+
+	cursor: pointer;
+
+	border-right: 1px solid #333;
+
+	&:hover {
+
+		background-color: $color-circle-hover;
+	}
+}
+
+
+.active .part-add {				// #1
+
+	@extend .part;
+
+	z-index: 200;
+
+	animation: rota1 $duration+s linear 1 normal forwards;
+}
+
+.active .part-invite {			// #2
+
+	@extend .part;
+
+	z-index: 190;
+
+	animation: rota2 $duration+s linear 1 normal forwards;
+}
+
+.active .part-msg {				// #3
+
+	@extend .part;
+
+	z-index: 180;
+
+	border-right: none;
+
+	animation: rota3 $duration+s linear 1 normal forwards;
+}
+
+
+
+@keyframes rota1 {
+
+	0% {			transform: rotate(180deg);	}
+	33%, 100% {		transform: rotate(120deg);	}
+}
+
+@keyframes rota2 {
+
+	0% {			transform: rotate(180deg);	}
+	33% {			transform: rotate(120deg);	}
+	66%, 100% {		transform: rotate( 60deg);	}
+}
+
+@keyframes rota3 {
+
+
+	0% {			transform: rotate(180deg);	}
+	33% {			transform: rotate(120deg);	}
+	66% {			transform: rotate( 60deg);	}
+	100% {			transform: rotate(  0deg);	}
+}
+
+
+
+// .spinner1:before {
+	// content: "+";
+	// position: absolute;
+	/*width: 10px;*/
+	// /*height: 10px;*/
+	/*border-radius: 50%;*/
+
+	// bottom: 30px;
+	// left: 48px;
+
+
+	/*bottom: 100px;*/
+	/*right: 80px;*/
+	/*right: 20px;*/
+	/*left: 0;*/
+	/*background: #fff;*/
+	/*border: 1px solid rgba(0,0,0,0.4);*/
+	/*box-shadow: inset 0 0 3px rgba(0,0,0,0.2);*/
+// }
+
+
+
+
+
+// .spinner2:after {
+	/*content: ">";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top: 20px;
+	right: 10px;*/
+	/*background: #fff;*/
+	/*border: 1px solid rgba(0,0,0,0.4);*/
+	/*box-shadow: inset 0 0 3px rgba(0,0,0,0.2);*/
+// }
+
+
+
+
+// .spinner3:after {
+ /* content: "!";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 20px;
+  right: 10px;*/
+  /*background: #fff;*/
+  /*border: 1px solid rgba(0,0,0,0.4);*/
+  /*box-shadow: inset 0 0 3px rgba(0,0,0,0.2);*/
+// }
+
+
