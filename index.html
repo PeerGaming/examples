@@ -65,16 +65,65 @@
 
     <li>
       <span class="type">Game:</span>
-      <span class="data"><a href="games/pg-catch/">pg-catch</a></span>
+      <span class="data"><a href="games/pg-catch/" id="game">pg-catch</a></span>
     </li>
 
 
     <li>
         <span class="type">Channel:</span>
-        <span class="data"><a href="lobby/">Lobby</a></span>
+        <span class="data"><a href="lobby/" id="channel">Lobby</a></span>
     </li>
 
   </ul>
+
+
+  <script>
+
+
+    var game    = document.getElementById('game'),
+        channel = document.getElementById('channel');
+
+
+    game.addEventListener('click', function ( e ) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+
+      start({
+        url     :  game.href,
+        width   :  window.outerWidth/4 * 3,
+        height  :  window.outerHeight/4 * 3
+      });
+    });
+
+
+    channel.addEventListener('click', function ( e ) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+
+      start({
+        url     :  channel.href,
+        width   :  window.outerWidth/4 * 3,
+        height  :  window.outerHeight/4 * 3
+      });
+    });
+
+
+    function start ( config ) {
+
+      var centerX = window.outerWidth/2 - config.width/2,
+        centerY = window.outerHeight/2 - config.height/2;
+
+      window.open( config.url, 'demo_' + Date.now(),
+            'status=no, toolbar=no, location=no, menubar=no,\
+            scroolbars=no,resizeable=no, personalbar=no, chrome=yes\
+            height=' + config.height + ', width=' + config.width + ', top=' + centerY + ', left=' + centerX );
+    }
+
+  </script>
 
 </body>
 </html>
