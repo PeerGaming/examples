@@ -29,7 +29,7 @@ pg.player.on( 'message', function ( msg ) {
 
   msg = JSON.parse( msg );
 
-  var name = pg.peers[ msg.remote ].account.name,
+  var name = pg.peers[ msg.local ].account.name,
 
       text = msg.data.msg;
 
