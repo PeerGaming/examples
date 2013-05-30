@@ -1,34 +1,30 @@
-function el ( id ) {
-
-	return document.getElementById( id );
-}
-
+function el ( id ) { return document.getElementById(id); }
 
 // elements
 
-var intro		= el('intro'),
+var intro			= el('intro'),
 
-	form		= el('form'),
-	userName	= el('user-name'),
+	form				= el('form'),
+	userName		= el('user-name'),
 	profileName = el('profile-name'),
-	list		= el('friendlist'),
+	list				= el('friendlist'),
 
-	header		= el('header'),
+	header			= el('header'),
 
 	buttonOpen	= el('button-open'),
-	barTop		= el('bar-top'),
-	barBottom	= el('bar-bottom'),
-	container	= el('container'),
-	gateLeft	= el('gate-left'),
-	gateRight	= el('gate-right'),
+	barTop			= el('bar-top'),
+	barBottom		= el('bar-bottom'),
+	container		= el('container'),
+	gateLeft		= el('gate-left'),
+	gateRight		= el('gate-right'),
 	panelLobby	= el('panel-lobby'),
-	panelInfo	= el('panel-info'),
+	panelInfo		= el('panel-info'),
 	currentList	= el('currentlist'),
 
-	chatform	= el('chatform'),
-	chatname	= el('chatname'),
-	chatinput	= el('chatinput'),
-	chatframe	= el('chatframe');
+	chatform		= el('chatform'),
+	chatname		= el('chatname'),
+	chatinput		= el('chatinput'),
+	chatframe		= el('chatframe');
 
 
 
@@ -44,12 +40,9 @@ form.addEventListener('submit', function ( e ) {
 });
 
 
-// login( 'test' );
-
-
 var peerTemplate = function ( id, name ) {
 
-	var tmpl = '<li class="peer" data-id="' + id + '">\
+	var tmpl = '<li class="peer" data-id="' + id + '" id="'+ id +'">\
 		\
 		<div class="peer-menu">\
 			<div class="part-add"></div>\
@@ -68,29 +61,9 @@ var peerTemplate = function ( id, name ) {
 
 function login ( name ) {
 
+	init( name );
 
-	pg.login( name, function ( player ) {
-
-
-
-		init( name );
-
-
-		player.on('connection', function ( peer ) {
-
-			currentlist.innerHTML += peerTemplate( peer.id, peer.name );
-		});
-
-
-		player.on('message', function ( msg ) {
-
-			var data = JSON.parse( msg );
-
-			showMessage( data.local, data.msg );
-		});
-
-	});
-
+	pg.login( name );
 }
 
 
@@ -183,7 +156,7 @@ function addInfoHandler(){
 
 function addChatHandler(){
 
-	chatform.addEventListener('submit', function ( e ) {
+	chatform.addEventListener( 'submit', function ( e ) {
 
 		e.preventDefault();
 		e.stopPropagation();
@@ -203,12 +176,11 @@ function addChatHandler(){
 
 function sendChat ( msg ) {
 
-	var player = pg.Player();
+	var player = pg.player;
 
 	player.send( msg );
 
-	// invoke for yourself ....
-	showMessage( player.name, msg );
+	showMessage( player.account.name, msg );
 }
 
 
