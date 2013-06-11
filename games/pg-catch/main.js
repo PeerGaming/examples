@@ -5,8 +5,11 @@
 // });
 
 
+
 // default route
-pg.routes('/test/23/');
+var route = '/test/42/';// + ( window.location.search.substr(1) ||42);
+
+pg.routes( route );
 
 
 // handler
@@ -39,6 +42,6 @@ pg.player.on('message', function ( msg ) {
 setTimeout(function(){
 
   // Game.init
-  pg.login( 'proGamer_42' );
+  pg.login( 'RealProGamer' );
 
 }, 1000 );

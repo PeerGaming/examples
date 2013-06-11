@@ -13,117 +13,56 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <style>
-
-    body {
-
-        margin            : 0 auto;
-        width             : calc( 50% - 250px);
-
-        font-size         : 1.6em;
-
-        background-color  :  #f5f5f5;
-    }
-
-    h2 { margin-left      : 140px; }
-
-    li {
-
-        margin            : 20px;
-        padding           : 10px;
-        width             : 250px;
-
-        border            : 1px solid #333;
-
-        list-style        : none;
-        background-color  : #f2f2f2;
-    }
-
-
-    a {
-
-        text-decoration   : none;
-
-        color             : #3311ff;
-
-        transition        : all 1sec ease-in-out;
-    }
-
-    a:hover{ text-decoration: underline; }
-
-    .type { margin-right  : 10px; }
-    .data { float         : right;}
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
 
-  <h2>Demos</h2>
 
-  <ul>
+  <div class="container" id="layout">
 
-    <li>
-      <span class="type">Game:</span>
-      <span class="data"><a href="games/pg-catch/" id="game">pg-catch</a></span>
-    </li>
+    <div class="wrap center main" id="main">
 
 
-    <li>
-        <span class="type">Channel:</span>
-        <span class="data"><a href="lobby/" id="channel">Lobby</a></span>
-    </li>
-
-  </ul>
+      <div class="center">
 
 
-  <script>
+        <div class="box" id="box"></div>
+
+        <ul class="modes" id="modes">
+
+          <li>
+
+            <!-- // -->
+
+            <form id="form-local">
+              <input class="button local" type="submit" value="Local Multiplayer" id="local" />
+            </form>
+            <div class="description">split screen in one browser</div>
+
+          </li>
 
 
-    var game    = document.getElementById('game'),
-        channel = document.getElementById('channel');
+          <li>
+
+            <form id="form-remote">
+              <button class="button remote" id="pre-remote">Remote Multiplayer</button>
+            </form>
+            <div class="description">different browsers on multiple systems</div>
+
+          </li>
+
+        </ul>
+
+      </div>
 
 
-    game.addEventListener('click', function ( e ) {
+    </div>
 
-      e.preventDefault();
-      e.stopPropagation();
-
-
-      start({
-        url     :  game.href,
-        width   :  window.outerWidth/4 * 3,
-        height  :  window.outerHeight/4 * 3
-      });
-    });
+  </div>
 
 
-    channel.addEventListener('click', function ( e ) {
-
-      e.preventDefault();
-      e.stopPropagation();
-
-
-      start({
-        url     :  channel.href,
-        width   :  window.outerWidth/4 * 3,
-        height  :  window.outerHeight/4 * 3
-      });
-    });
-
-
-    function start ( config ) {
-
-      var centerX = window.outerWidth/2 - config.width/2,
-        centerY = window.outerHeight/2 - config.height/2;
-
-      window.open( config.url, 'demo_' + Date.now(),
-            'status=no, toolbar=no, location=no, menubar=no,\
-            scroolbars=no,resizeable=no, personalbar=no, chrome=yes\
-            height=' + config.height + ', width=' + config.width + ', top=' + centerY + ', left=' + centerX );
-    }
-
-  </script>
+  <script src="ui.js"></script>
 
 </body>
 </html>
