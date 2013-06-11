@@ -103,7 +103,10 @@ var Game = (function(){
   // enable player input
   function input(){
 
-    document.addEventListener( 'keydown', function ( e ) {
+
+    var doc = document;
+
+    doc.addEventListener( 'keydown', function ( e ) {
 
       e.preventDefault();
       e.stopPropagation();
@@ -117,13 +120,13 @@ var Game = (function(){
     });
 
 
-    document.addEventListener( 'mousedown', function ( e ) {
+    doc.addEventListener( 'mousedown', function ( e ) {
 
       e.preventDefault();
 
       e.stopPropagation();
 
-      document.addEventListener( 'mousemove', pressed );
+      doc.addEventListener( 'mousemove', pressed );
     });
 
 
@@ -140,14 +143,14 @@ var Game = (function(){
 
 
 
-    document.addEventListener( 'mouseup', function ( e ) {
+    doc.addEventListener( 'mouseup', function ( e ) {
 
       player.ax = player.ay = 0;
 
-      document.removeEventListener( 'mousemove', pressed );
+      doc.removeEventListener( 'mousemove', pressed );
     });
 
-    document.addEventListener( 'keyup', function ( e ) { player.ax = player.ay = 0; });
+    doc.addEventListener( 'keyup', function ( e ) { player.ax = player.ay = 0; });
   }
 
 
